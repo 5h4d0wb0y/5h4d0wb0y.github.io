@@ -46,6 +46,33 @@
     </a>
   {% endif %}
 
+  {% if site.share-links-active.reddit %}
+  <!--- Share on Reddit -->
+  <a href="http://www.reddit.com/submit?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    class="btn btn-social-icon btn-reddit" title="Share on Reddit" >
+    <span class="fa fa-fw fa-reddit-alien" aria-hidden="true"></span>
+    <span class="sr-only">Reddit</span>
+  </a>
+  {% endif %}
+
+  {% if site.share-links-active.pinterest %}
+  <!--- Share on Reddit -->
+  <a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    class="btn btn-social-icon btn-pinterest" title="Share on Pinterest" >
+    <span class="fa fa-fw fa-pinterest-p" aria-hidden="true"></span>
+    <span class="sr-only">Pinterest</span>
+  </a>
+  {% endif %}
+
+  {% if site.share-links-active.tumblr %}
+  <!--- Share on Tumblr -->
+  <a href="http://www.tumblr.com/share/link?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    class="btn btn-social-icon btn-tumblr" title="Share on Tumblr" >
+    <span class="fa fa-fw fa-tumblr" aria-hidden="true"></span>
+    <span class="sr-only">Tumblr</span>
+  </a>
+  {% endif %}
+  
 </section>
 
 {% endif %}

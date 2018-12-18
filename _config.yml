@@ -100,6 +100,9 @@ share-links-active:
   facebook: true
   google: true
   linkedin: true
+  reddit: true
+  pinterest: true
+  tumblr: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
