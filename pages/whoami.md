@@ -12,12 +12,19 @@ Hi, my name is Simone or 5h4d0wb0y and I like computers, music, food, dogs and t
 I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’s not my first language :smiley:
 
 
-Peace,
+### Certifications
 
-Simone AKA **5h4d0wb0y**
+* 
+
+
+### Courses
+
+* 
+
+
+### Badges
 
 <script src="https://www.hackthebox.eu/badge/8011"></script>
-
 
 
 ### Hit me up on:

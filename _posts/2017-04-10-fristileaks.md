@@ -2,11 +2,12 @@
 layout: post
 title: FristiLeaks 1.3 Walkthrough
 subtitle: Virtual Machine hosted on vulnhub from Ar0xA
+date: 2017-04-10 00:00:00
+lastupdated: 
 category: Vulnhub
-tags:
-- vulnhub
-- walkthrough
+tags: [vulnhub, walkthrough]
 bigimg: /img/walkthrough2.jpg
+comments: true
 ---
 
 Table of contents

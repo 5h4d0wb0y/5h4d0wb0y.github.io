@@ -2,10 +2,10 @@
 layout: post
 title: The Necromancer 1 Walkthrough
 subtitle: Virtual Machine hosted on vulnhub from Xerubus
+date: 2017-05-12 00:00:00
+lastupdated: 
 category: Vulnhub
-tags:
-- vulnhub
-- walkthrough
+tags: [vulnhub, walkthrough]
 bigimg: /img/walkthrough4.jpg
 comments: true
 ---

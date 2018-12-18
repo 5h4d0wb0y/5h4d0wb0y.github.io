@@ -36,14 +36,13 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
-		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }} - 
-                     {% assign words = page.content | number_of_words %}
-                     {% if words < 360 %}
-                        1 min read
-                     {% else %}
-                        {{ words | divided_by:180 }} min read
-                     {% endif %}
-</span>
+        <span class="post-meta">
+          Posted on {{ page.date | date: "%B %-d, %Y" }}
+          {% if page.lastupdated %}
+          | Last updated {{ page.lastupdated | date: "%B %-d, %Y" }}
+          {% endif %}
+        {% include read_time.html content=content %}
+        </span>
 		  {% endif %}
         </div>
       </div>

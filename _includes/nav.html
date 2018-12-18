@@ -33,14 +33,23 @@
             {% include navbarlink.html link=link %}
           </li>
         {% endif %}
-        {% endfor %}
+      {% endfor %}
+
+        {% if site.nav-search %}
+          <li>
+            <a href="{{ site.baseurl }}/{{ site.nav-search }}" class="nav-search-link" title="Search">
+              <span class="fa fa-search nav-search-icon"></span>
+              <!-- <span class="nav-search-text">Search</span> -->
+            </a>
+          </li>
+        {% endif %}
       </ul>
     </div>
 
 	{% if page.image and (layout.show-avatar or page.show-avatar) %}
 	<div class="avatar-container">
 	  <div class="avatar-img-border">
-	    <a href="{{ site.url }} ">
+	    <a href="{{ site.url }}">
 	      <img class="avatar-img" src="{{ page.image | prepend: site.baseurl | replace: '//', '/' }}" />
 		</a>
 	  </div>

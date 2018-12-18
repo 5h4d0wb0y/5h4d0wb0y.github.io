@@ -2,9 +2,16 @@
 layout: page
 title: 5h4d0wb0y.github.io
 subtitle: 5h4d0wb0y's information security blog focused on penetration testing, video tutorials and tools.
+css: "/css/index.css"
 use-site-title: true
 bigimg: /img/logo.jpg
 ---
+
+<div class="list-filters">
+    <span class="list-filter filter-selected">All posts</span>
+  <a href="/popular" class="list-filter">Most Popular</a>
+  <a href="/tutorials" class="list-filter">Tutorials</a>
+</div>
 
 <div class="posts-list">
   {% for post in paginator.posts %}
@@ -20,7 +27,11 @@ bigimg: /img/logo.jpg
     </a>
 
     <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }} - {% assign words = post.content | number_of_words %}{% if words < 360 %}1 min read{% else %}{{ words | divided_by:180 }} min read{% endif %}
+      Posted on {{ post.date | date: "%B %-d, %Y" }}
+      {% if post.lastupdated %}
+      | Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
+      {% endif %}
+      {% include read_time.html content=content %}
     </p>
 
     <div class="post-entry-container">
@@ -45,7 +56,7 @@ bigimg: /img/logo.jpg
       Tags:
       {% if site.link-tags %}
       {% for tag in post.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+      <a href="{{ site.baseurl }}/tags#{{- tag -}}">{{- tag -}}</a>
       {% endfor %}
       {% else %}
         {{ post.tags | join: ", " }}
