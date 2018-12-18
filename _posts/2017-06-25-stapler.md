@@ -10,7 +10,8 @@ bigimg: /img/walkthrough2.jpg
 comments: true
 ---
 
-Table of contents
+# Table of contents
+{:.no_toc}
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
