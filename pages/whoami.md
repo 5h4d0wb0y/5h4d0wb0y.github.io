@@ -44,7 +44,7 @@ I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
   <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
-     data-address="1933phfhK3ZgFQNLGSDXvqCn32k2buXY8a"
+     data-address="18vSjKGPMS6wgBa2ND8RubbvuzSgkvrQaE"
      data-shared="false">
     <div class="blockchain stage-begin">
         <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
