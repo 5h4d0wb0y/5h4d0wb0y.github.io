@@ -12,12 +12,11 @@ Hi, my name is Simone or 5h4d0wb0y and I like computers, music, food, dogs and t
 I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’s not my first language :smiley:
 
 
-### Certifications
+### <i class="fa fa-graduation-cap"></i> Certifications
 
 * 
 
-
-### Courses
+### <i class="fa fa-graduation-cap"></i> Courses
 
 * 
 

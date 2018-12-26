@@ -24,8 +24,9 @@ description: An information security blog by Simone Di Francia.
 # List of links in the navigation bar
 navbar-links:
   Blog:
-    - Posts: "posts"
+    - Popular: "popular"
     - Tags: "tags"
+    - Tutorials: "tutorials"
     - Walkthroughs: "walkthroughs"
   Resources:
     - Tools: "tools"

@@ -12,6 +12,7 @@ bigimg: /img/logo.jpg
   <a href="/" class="list-filter">All posts</a>
   <a href="/popular" class="list-filter">Most Popular</a>
   <span class="list-filter filter-selected">Tutorials</span>
+  <a href="/tags" class="list-filter">Tags</a>
 </div>
 
 <div class="posts-list">
@@ -26,9 +27,9 @@ bigimg: /img/logo.jpg
 	    </h3>
 	    {% endif %}
       <p class="post-meta">
-        Posted on {{ post.date | date: "%B %-d, %Y" }}
+        <span class="fa fa-calendar"></span> Posted on {{ post.date | date: "%B %-d, %Y" }}
         {% if post.lastupdated %}
-        | Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
+        | <span class="fa fa-refresh"></span> Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
         {% endif %}
         {% include read_time.html content=content %}
       </p>
