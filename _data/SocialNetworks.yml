@@ -105,3 +105,13 @@ docker:
   name: "Docker"
   baseURL: "https://hub.docker.com/u/"
   icon: "fab fa-docker" 
+
+gitlab:
+  name: "GitLab"
+  baseURL: "https://gitlab.com/"
+  icon: "fab fa-gitlab"
+
+slideshare:
+  name: "SlideShare"
+  baseURL: "https://gitlab.com/"
+  icon: "fab fa-slideshare"

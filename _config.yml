@@ -79,12 +79,15 @@ social-network-links:
   rss: true
   email: "5h4d0wb0y@protonmail.com"
   github: 5h4d0wb0y
+  gitlab: 5h4d0wb0y
   twitter: 5h4d0wb0y
   linkedin: simone-di-francia-474513142
   reddit: 5h4d0wb0y
   instagram: 5h4d0wb0y
   keybase: 5h4d0wb0y
-#  docker: 5h4d0wb0y
+  docker: 5h4d0wb0y
+#  slideshare: 5h4d0wb0y
+#  twitch: 5h4d0wb0y
 #  facebook: daattali
 #  google-plus: +DeanAttali
 #  xing: yourname
@@ -94,7 +97,6 @@ social-network-links:
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
-#  twitch: yourname
 #  yelp: yourname
 
 # Select which share links to show in posts
