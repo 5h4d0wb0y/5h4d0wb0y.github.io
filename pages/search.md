@@ -5,9 +5,9 @@ permalink: /search
 css: "/css/search.css"
 ---
 
-## Search on 5h4d0wb0y.github.io
+## <i class="fas fa-search"></i> Search on 5h4d0wb0y.github.io
 
-### Using the Amazing Google 
+### Using the Amazing Google
 
 <div id="google-custom-search">
 
