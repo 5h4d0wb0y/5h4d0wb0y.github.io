@@ -26,9 +26,9 @@ bigimg: /img/logo.jpg
 	    </h3>
 	    {% endif %}
       <p class="post-meta">
-        Posted on {{ post.date | date: "%B %-d, %Y" }}
+        <span class="fa fa-calendar"></span> Posted on {{ post.date | date: "%B %-d, %Y" }}
         {% if post.lastupdated %}
-        | Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
+        | <span class="fa fa-refresh"></span> Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
         {% endif %}
         {% include read_time.html content=content %}
       </p>

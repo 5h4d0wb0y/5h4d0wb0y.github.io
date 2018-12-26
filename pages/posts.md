@@ -23,9 +23,9 @@ description: All posts
 	    	<h4 class="post-subtitle">{{ post.subtitle }}</h4>
 	    </a>
 		<p class="tab"><span class="post-meta">
-		Posted on {{ post.date | date: "%B %e, %Y" }}
+		<span class="fa fa-calendar"></span> Posted on {{ post.date | date: "%B %e, %Y" }}
 		{% if post.lastupdated %}
-        | Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
+        | <span class="fa fa-refresh"></span> Last updated {{ post.lastupdated | date: "%B %-d, %Y" }}
 	    {% endif %}
 		{% include read_time.html content=post.content %}</span> 
 		<span class="post-entry">{{ post.content | truncatewords: 100 | strip_html | xml_escape}}</span><a 	href="{{ post.url }}"><b> [more]</b></a></p>
