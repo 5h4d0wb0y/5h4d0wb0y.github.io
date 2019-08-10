@@ -27,21 +27,21 @@ There are 11 flags to collect to solve the challenge. Let's start!
 ## Flag 1
 
 I started from netdiscover to find the vm's ip
-![Net Discover](/assets/the-necromancer-1/netdiscover.png)
+![Net Discover](/assets/vulnhub/the-necromancer-1/netdiscover.png)
 
 I noticed that the vm's ip renewed every 900 seconds but it's not something we should care about. I launched some nmap commands but there weren't any open ports. I also tested several other techniques, but the ports remained closed. I was a bit confused.. :confused: Sometimes the penetration testing can be frustrating and it's easy to lose your patience!
 
 So I launched wireshark, then I started reading the packets and I thought: "WTF?" The vm was trying to connect to my Kali VM on port 4444 with tcp protocol.
-![Wireshark](/assets/the-necromancer-1/wireshark.png)
+![Wireshark](/assets/vulnhub/the-necromancer-1/wireshark.png)
 
 So I listened to that port with netcat and nothing... after a few minutes I saw this:
-![NetCat](/assets/the-necromancer-1/netcat.png)
+![NetCat](/assets/vulnhub/the-necromancer-1/netcat.png)
 
 It looked like a base64 string, so I decoded it:
-![Flag 1](/assets/the-necromancer-1/flag1.png)
+![Flag 1](/assets/vulnhub/the-necromancer-1/flag1.png)
 
 Good! The first Flag was finally obtained but first I had to decrypt the md5 string: 
-![MD5 Flag 1](/assets/the-necromancer-1/md5-flag1.png)
+![MD5 Flag 1](/assets/vulnhub/the-necromancer-1/md5-flag1.png)
 
 ## Flag 2
 Then in the base64 decoded string I could always see another interesting info below:
@@ -51,43 +51,43 @@ Then in the base64 decoded string I could always see another interesting info be
 ```
 
 I was a little bit confused because I'd never done such a VM, so I thought to try connecting on udp port 666:
-![Flag 2](/assets/the-necromancer-1/flag2.png)
+![Flag 2](/assets/vulnhub/the-necromancer-1/flag2.png)
 
 Awesome!! I found the second Flag! I came back to decrypter's webpage and I found the decrypted key:
-![MD5 Flag 2](/assets/the-necromancer-1/md5-flag2.png)
+![MD5 Flag 2](/assets/vulnhub/the-necromancer-1/md5-flag2.png)
 
 It was a number but I couldn't know what to do with it. So I saved it and I thought it was alright to go a step further.
 
 ## Flag 3
 I tried to connect on port 80 but with a big surprise, because I had already tried it before, I viewed this:
-![The Chasm](/assets/the-necromancer-1/the-chasm.png)
+![The Chasm](/assets/vulnhub/the-necromancer-1/the-chasm.png)
 
 I looked into webpage's source code, but there wasn't anything else but a jpg image. I downloaded it and I tried to examine it with exif:
-![The Chasm Exif](/assets/the-necromancer-1/the-chasm-exif.png)
+![The Chasm Exif](/assets/vulnhub/the-necromancer-1/the-chasm-exif.png)
 
 We have no value of color space, that’s interesting... Probably it contains files so I launched binwalk to extract a file inside:
-![The Chasm Binwalk](/assets/the-necromancer-1/the-chasm-binwalk.png)
+![The Chasm Binwalk](/assets/vulnhub/the-necromancer-1/the-chasm-binwalk.png)
 
 We can see that there was a zip archive inside, and a txt file named feathers.txt. I navigated into extracted folder and I could see another base64 string, so I decoded it and I received the third flag with another hint!!
-![The Chasm Feathers.txt](/assets/the-necromancer-1/flag3.png)
+![The Chasm Feathers.txt](/assets/vulnhub/the-necromancer-1/flag3.png)
 
 I came back to decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 3](/assets/the-necromancer-1/md5-flag3.png)
+![MD5 Flag 3](/assets/vulnhub/the-necromancer-1/md5-flag3.png)
 
 It is another number but we don't know what to do with it. 
 
 ## Flag 4
 In the file viewed before we could see the hint "Cross the chasm at /amagicbridgeappearsatthechasm" so I browsed into this website path and I viewed:
-![The Cave](/assets/the-necromancer-1/the-cave.png)
+![The Cave](/assets/vulnhub/the-necromancer-1/the-cave.png)
 
 Another page with an image! I tried to repeat step before but it seemed a normal image:
-![The Cave Exiftool](/assets/the-necromancer-1/the-cave-exiftool.png)
+![The Cave Exiftool](/assets/vulnhub/the-necromancer-1/the-cave-exiftool.png)
 
 Not knowing what to do I decided to scan the entire website with dirb.. it will assist me uncovering the hidden magic :stuck_out_tongue_winking_eye:
-![The Cave Dirb](/assets/the-necromancer-1/the-cave-dirb.png)
+![The Cave Dirb](/assets/vulnhub/the-necromancer-1/the-cave-dirb.png)
 
 Yes! I found a file named talisman, so I downloaded it. It is a 32 bit executable. So I executed it and when I saw inside nothing happened. :disappointed:
-![The Cave Talisman](/assets/the-necromancer-1/the-cave-talisman.png)
+![The Cave Talisman](/assets/vulnhub/the-necromancer-1/the-cave-talisman.png)
 
 I decided to debug it with GNU Debugger! :smiling_imp: First I viewed some functions, two of those were named wearTalisman and chantToBreakSpell. I put a break on wearTalisman and then a jump to chantToBreakSpell:
 
@@ -152,7 +152,7 @@ Chant these words at u31337
 ```
 
 Finally I found the fourth flag!! I came back to the decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 4](/assets/the-necromancer-1/md5-flag4.png)
+![MD5 Flag 4](/assets/vulnhub/the-necromancer-1/md5-flag4.png)
 
 ## Flag 5
 In the text I could see another interesting hint below:
@@ -162,17 +162,17 @@ Chant these words at u31337
 ```
 
 So I launched again netcat on udp port 31337 
-![Flag 5](/assets/the-necromancer-1/flag5.png)
+![Flag 5](/assets/vulnhub/the-necromancer-1/flag5.png)
 
 And like this I found the fifth flag. I came back to the decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 5](/assets/the-necromancer-1/md5-flag5.png)
+![MD5 Flag 5](/assets/vulnhub/the-necromancer-1/md5-flag5.png)
 
 ## Flag 6
 In the text we can see the new website path (/thenecromancerwillabsorbyoursoul/) then I navigated into:
-![The Door](/assets/the-necromancer-1/the-door.png)
+![The Door](/assets/vulnhub/the-necromancer-1/the-door.png)
 
 I found the sixth flag! I came back to decrypter's webpage and I found the decrypted hash:
-![MD5 Flag6](/assets/the-necromancer-1/md5-flag6.png)
+![MD5 Flag6](/assets/vulnhub/the-necromancer-1/md5-flag6.png)
 
 ## Flag 7
 I viewed into the webpage's source code and I found a file named necromancer, so I downloaded it and I saw that it contained a network captured pcap file inside:
@@ -201,16 +201,16 @@ necromancer.cap: tcpdump capture file (little-endian) - version 2.4 (802.11, cap
 root@kali:~# 
 ```
 We can open it with Wireshark and I discovered IEEE 802.11 WiFi traffic inside. There was a beacon frame for the SSID community:
-![Wireshark Necromancer pcap](/assets/the-necromancer-1/wireshark-necromancer-pcap.png)
+![Wireshark Necromancer pcap](/assets/vulnhub/the-necromancer-1/wireshark-necromancer-pcap.png)
 
 Then scrolling down I could see some deauth packets and also a captured handshake.
-![Wireshark Necromancer pcap](/assets/the-necromancer-1/wireshark-necromancer-pcap-packet.png)
+![Wireshark Necromancer pcap](/assets/vulnhub/the-necromancer-1/wireshark-necromancer-pcap-packet.png)
 
 So let's try to crack it with aircrack using the found packet's BSSID and the rockyou wordlist:
-![Aircrack](/assets/the-necromancer-1/aircrack.png)
+![Aircrack](/assets/vulnhub/the-necromancer-1/aircrack.png)
 
 Oh yes!! We found it in no time :sunglasses: !! At this point I came back on the website and I kept reading it:
-![The Door](/assets/the-necromancer-1/the-door2.png)
+![The Door](/assets/vulnhub/the-necromancer-1/the-door2.png)
 
 I tried to connect on udp port 161 another time but unsuccessfully:
 
@@ -268,7 +268,7 @@ iso.3.6.1.2.1.1.6.0 = No more variables left in this MIB View (It is past the en
 root@kali:~# 
 ```
 Excellent! flag 7 is also obtained! The md5 hash decrypted is demonslayer:
-![MD5 Flag 7](/assets/the-necromancer-1/md5-flag7.png)
+![MD5 Flag 7](/assets/vulnhub/the-necromancer-1/md5-flag7.png)
 
 ## Flag 8
 It seemed that the tcp port 22, supposedly ssh, is opened. So I tried to verify if it is right with nmap:
@@ -398,7 +398,7 @@ Where do the Black Robes practice magic of the Greater Path?  Kelewan
 flag8{55a6af2ca3fee9f2fef81d20743bda2c}
 ```
 Oh yes! I found flag 8! So of course I came back to decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 8](/assets/the-necromancer-1/md5-flag8.png)
+![MD5 Flag 8](/assets/vulnhub/the-necromancer-1/md5-flag8.png)
 
 ## Flag 9
 
@@ -418,7 +418,7 @@ Who did Johann Faust VIII make a deal with?  Mephistopheles
 flag9{713587e17e796209d1df4c9c2c2d2966}
 ```
 Oh yes, I found the flag 9!! I came back to decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 9](/assets/the-necromancer-1/md5-flag9.png)
+![MD5 Flag 9](/assets/vulnhub/the-necromancer-1/md5-flag9.png)
 
 ## Flag 10
 
@@ -450,18 +450,18 @@ You walk over to where the Necromancer once stood.
 On the ground is a small vile.
 ```
 I found the flag 10!! We almost done. I came back to decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 10](/assets/the-necromancer-1/md5-flag10.png)
+![MD5 Flag 10](/assets/vulnhub/the-necromancer-1/md5-flag10.png)
 
 ## Flag 11
 The hint seemed to be for a smallvile. So where is it? I tried sudo su command just in case it worked, but nothing.
 I decided to start searching around by using the locate command and then I found the .smallvile file:
-![Small Vile](/assets/the-necromancer-1/smallvile.png)
+![Small Vile](/assets/vulnhub/the-necromancer-1/smallvile.png)
 
 After some testing, I tried to launch again sudo su command but now it said that the demonslayer user is not allowed to execute su command as root. This 'error' was different from my previous sudo command's output because when I tried to sudo it very specifically said I wasn't in the sudoers list. Maybe now we can use sudo command to find the 11th flag. Presumably it was in the root folder and I used the same type of name like the rest of the flags found before:
-![Flag 11](/assets/the-necromancer-1/flag11.png)
+![Flag 11](/assets/vulnhub/the-necromancer-1/flag11.png)
 
 BOOOM BABY!! I found the last flag! I came back to decrypter's webpage and I found the decrypted hash:
-![MD5 Flag 11](/assets/the-necromancer-1/md5-flag11.png)
+![MD5 Flag 11](/assets/vulnhub/the-necromancer-1/md5-flag11.png)
 
 ## Conclusion
 Thanks to Xerubus for this interesting CTF. You must put some serious work into this challenge for completing. Good Work!!

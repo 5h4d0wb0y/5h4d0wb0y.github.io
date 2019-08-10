@@ -24,22 +24,22 @@ Hi guys, today I'm ready to publish my walkthrough against the vm hosted on vuln
 ## Information Gathering
 
 After launching netdiscover to find the vm's ip address,
-![Net Discover](/assets/fristileaks/netdiscover.png)
+![Net Discover](/assets/vulnhub/fristileaks/netdiscover.png)
 
 I scanned the server with nmap and I could see apache web server version 2.4.16 running on port 80:
-![Nmap](/assets/fristileaks/nmap.png)
+![Nmap](/assets/vulnhub/fristileaks/nmap.png)
 
 So I browsed it and this is what I saw:
-![Web Site](/assets/fristileaks/website.png)
+![Web Site](/assets/vulnhub/fristileaks/website.png)
 
 And its source code:
-![Web Site Source Code](/assets/fristileaks/website-source.png)
+![Web Site Source Code](/assets/vulnhub/fristileaks/website-source.png)
 
 
 ## Vulnerability Analysis
 
 After that I decided to launch nikto, which revealed five directories cola, sisi, beer, icons and images:
-![Nikto](/assets/fristileaks/nikto.png)
+![Nikto](/assets/vulnhub/fristileaks/nikto.png)
 
 The file robots.txt reveals:
 
@@ -51,16 +51,16 @@ Disallow: /beer
 ```
 
 After that I navigated first in the cola folder and I could see an image, and then in both the sisi and the beef folders returned the same troll page:
-![Website Cola](/assets/fristileaks/website-cola.png)
+![Website Cola](/assets/vulnhub/fristileaks/website-cola.png)
 
 I thought about the homepage that said "Keep Calm and Drink Fristi" and I wonder if that means instead of the drinks like cola and beer, use fristi instead.. In fact a login page appears:
-![Website Login](/assets/fristileaks/website-login.png)
+![Website Login](/assets/vulnhub/fristileaks/website-login.png)
 
 
 ## Exploitation
 
 I tried some credentials but I didn't be able to login, so I viewed the page' source code and I could see a base64 image:
-![Website Login Image](/assets/fristileaks/website-login-image.png)
+![Website Login Image](/assets/vulnhub/fristileaks/website-login-image.png)
 
 In the page' source code there was also a comment with a possible username:
 
@@ -74,16 +74,16 @@ We need to clean this up for production. I left some junk in here to make testin
 ```
 
 I converted a base64 encoded text to an image and then I could see the image:
-![Website Login Image Password](/assets/fristileaks/website-login-image-password.png)
+![Website Login Image Password](/assets/vulnhub/fristileaks/website-login-image-password.png)
 
 I tried to put these credentials in the login page and I was able to login! :smiley: After that I opened a link to upload my php shell:
-![Website Upload](/assets/fristileaks/website-upload.png)
+![Website Upload](/assets/vulnhub/fristileaks/website-upload.png)
 
 The upload page accepted only images, so I used a little trick.. I added a jpg extension to the php reverse shell, I launched the netcat listener and then I navigated to it:
-![Website Reverse Shell](/assets/fristileaks/website-reverse-shell.png)
+![Website Reverse Shell](/assets/vulnhub/fristileaks/website-reverse-shell.png)
 
 Good!! I received a reverse shell..
-![Reverse Shell](/assets/fristileaks/reverse-shell.png)
+![Reverse Shell](/assets/vulnhub/fristileaks/reverse-shell.png)
 
 
 ## Post-Exploitation
