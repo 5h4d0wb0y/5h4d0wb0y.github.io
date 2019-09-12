@@ -14,7 +14,7 @@ I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’
 
 ### <i class="fas fa-graduation-cap"></i> Certifications
 
-* 
+* [eJPT - eLearnSecurity Junior Penetration Tester](https://www.elearnsecurity.com/certification/verify/?c=17034152-01c9-471d-8873-94c5fc6a6b8e)
 
 
 ### <i class="fas fa-graduation-cap"></i> Courses
@@ -26,6 +26,7 @@ I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’
 * [PentesterLab White Badge](https://pentesterlab.com/profile/ad2597cc94153fdac115c823b4){:target="_blank"}
 * [PentesterLab PCAP Badge](https://pentesterlab.com/profile/ad2597cc94153fdac115c823b4){:target="_blank"}
 * [PentesterLab Yellow Badge](https://pentesterlab.com/profile/ad2597cc94153fdac115c823b4){:target="_blank"}
+* [eLearnSecurity Penetration Testing Student](https://www.elearnsecurity.it/course/penetration_testing_student/){:target="_blank"}
 
 
 ### Badges
