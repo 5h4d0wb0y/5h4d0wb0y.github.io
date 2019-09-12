@@ -7,7 +7,7 @@ bigimg: /img/logo.jpg
 description: This is my about page
 ---
 
-Hi, my name is Simone or 5h4d0wb0y and I am a consultant, project manager, penetration tester, red teamer and business owner. My interests are music, food, dogs and travelling to discover the world. I am also interested in computers, opensource, programming, penetration testing and redteaming. I like hacking things! Everything I learn then I use it in my projects.. I :heart: open source!
+Hi, my name is Simone and I go by the alias `5h4d0wb0y`. I am a consultant, project manager, penetration tester, red teamer and business owner. My interests are music, food, dogs and travelling to discover the world. I am also interested in computers, opensource, programming, penetration testing and redteaming. I like hacking things! Everything I learn then I use it in my projects.. I :heart: open source!
 
 I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’s not my first language :smiley:
 
@@ -29,22 +29,12 @@ I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’
 * [eLearnSecurity Penetration Testing Student](https://www.elearnsecurity.it/course/penetration_testing_student/){:target="_blank"}
 
 
-### Badges
+### <i class="far fa-id-badge"></i> Badges
 
 <script src="https://www.hackthebox.eu/badge/8011"></script>
 
 
-### Hit me up on:
-
-* Email - 5h4d0wb0y AT protonmail DOT com
-* GPG - 2A4ED0743ABFA787A3EA8FE760D5EADC671CBCFF
-* About.me at [sh4d0wb0y](https://about.me/sh4d0wb0y){:target="_blank"}
-* Keybase at [5h4d0wb0y](https://keybase.io/5h4d0wb0y){:target="_blank"}
-* Medium at [@sh4d0wb0y](https://medium.com/@sh4d0wb0y){:target="_blank"}
-* Twitter at [@5h4d0wb0y](https://twitter.com/5h4d0wb0y){:target="_blank"} <a href="https://twitter.com/5h4d0wb0y?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @5h4d0wb0y</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-* GitHub at [5h4d0wb0y](https://github.com/5h4d0wb0y){:target="_blank"}
-* LinkedIn at [Simone Di Francia](https://linkedin.com/in/simone-di-francia-474513142){:target="_blank"}
-* Reddit at [5h4d0wb0y](https://www.reddit.com/user/5h4d0wb0y){:target="_blank"}
+### <i class="fas fa-donate"></i> Support Me
 
 <table class="table table-borderless no-border">
   <tr class="borderless">
