@@ -14,9 +14,9 @@ description:
 </div>
 
 <div class="well article">
-    <h2>Hash-Cracker</h2>
-    <p class="tab">It cracks the hash using free online services.</p>
-    <a href="https://github.com/5h4d0wb0y/hash-cracker" target="_blank"><b>Github Repo</b></a>
+    <h2>Crackhash</h2>
+    <p class="tab">It is a tool that try to crack different types of hashes using free online services.</p>
+    <a href="https://github.com/5h4d0wb0y/crackhash" target="_blank"><b>Github Repo</b></a>
 </div>
 
 <div class="well article">
