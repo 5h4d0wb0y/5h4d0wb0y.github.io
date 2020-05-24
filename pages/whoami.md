@@ -7,7 +7,7 @@ bigimg: /img/logo.jpg
 description: This is my about page
 ---
 
-Hi, my name is Simone and I go by the alias `5h4d0wb0y`. I am a consultant, project manager, penetration tester, red teamer and business owner. My interests are music, food, dogs and travelling to discover the world. I am also interested in computers, opensource, programming, penetration testing and redteaming. I like hacking things! Everything I learn then I use it in my projects.. I :heart: open source!
+Hi, my name is Simone and I go by the alias `5h4d0wb0y`. I am a consultant, project manager, penetration tester, red teamer and business owner. My interests are music, food, dogs and travelling to discover the world. I am also interested in computers, opensource, programming, penetration testing and redteaming. I like hacking things and understand how they work! Everything I learn then I use it in my projects.. I :heart: open source!
 
 I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’s not my first language :smiley:
 
@@ -15,6 +15,7 @@ I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’
 ### <i class="fas fa-graduation-cap"></i> Certifications
 
 * [eJPT - eLearnSecurity Junior Penetration Tester](https://www.elearnsecurity.com/certification/verify/?c=17034152-01c9-471d-8873-94c5fc6a6b8e)
+* [eCPPTv2 - eLearnSecurity Certified Professional Penetration Tester](https://www.elearnsecurity.com/certification/verify?c=62d1458c-2ced-43f6-b70c-205417df45c5){:target="_blank"}
 
 
 ### <i class="fas fa-graduation-cap"></i> Courses
@@ -26,13 +27,15 @@ I hope you’ll enjoy my blog and that you’ll forgive me for my english, it’
 * [PentesterLab White Badge](https://pentesterlab.com/profile/ad2597cc94153fdac115c823b4){:target="_blank"}
 * [PentesterLab PCAP Badge](https://pentesterlab.com/profile/ad2597cc94153fdac115c823b4){:target="_blank"}
 * [PentesterLab Yellow Badge](https://pentesterlab.com/profile/ad2597cc94153fdac115c823b4){:target="_blank"}
-* [eLearnSecurity Penetration Testing Student](https://www.elearnsecurity.it/course/penetration_testing_student/){:target="_blank"}
+* [eLearnSecurity Penetration Testing Student](https://www.elearnsecurity.com/course/penetration_testing_student/){:target="_blank"}
+* [eLearnSecurity Penetration Testing Professional](https://www.elearnsecurity.com/course/penetration_testing/){:target="_blank"}
 
 
 ### <i class="far fa-id-badge"></i> Badges
 
 <script src="https://www.hackthebox.eu/badge/8011"></script>
 
+<script src="https://tryhackme.com/badge/77276"></script>
 
 ### <i class="fas fa-donate"></i> Support Me
 
